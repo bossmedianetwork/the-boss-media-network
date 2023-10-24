@@ -9,6 +9,10 @@ export const HeaderSection = styled("header")`
     align-items: center;
     text-align: center;
   }
+
+  @media only screen and (max-width: 890px) {
+    display: none;
+  }
 `;
 
 export const LogoContainer = styled(Link)`

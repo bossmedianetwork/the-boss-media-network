@@ -26,10 +26,13 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
-        <Col lg={12} md={11} sm={24} xs={24}>
+      <Row justify="center" align="middle">
+        <Col lg={10} md={9} sm={20} xs={20} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Slide direction="left">
             <Block title={title} content={content} />
+            <div className="image-container" style={{ maxWidth: '100%', margin: '0rem' }}>
+              <img src="/img/svg/contactform.svg" alt="Contact Form Illustration" style={{ width: '100%' }} />
+            </div>
           </Slide>
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
@@ -39,7 +42,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="name"
-                  placeholder="Your Name"
+                  placeholder="State Your Alias"
                   value={values.name || ""}
                   onChange={handleChange}
                 />
@@ -49,7 +52,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <Input
                   type="text"
                   name="email"
-                  placeholder="Your Email"
+                  placeholder="Where Should We Forward the Reply?"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -57,7 +60,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <TextArea
-                  placeholder="Your Message"
+                  placeholder="What’s the Proposition?"
                   value={values.message || ""}
                   name="message"
                   onChange={handleChange}
@@ -65,7 +68,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <Button name="submit">{t("Dispatch Message")}</Button>
               </ButtonContainer>
             </FormGroup>
           </Slide>

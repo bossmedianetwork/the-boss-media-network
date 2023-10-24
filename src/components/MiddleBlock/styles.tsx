@@ -12,6 +12,13 @@ export const MiddleBlockSection = styled("section")`
   }
 `;
 
+export const Title = styled("h6")`
+  background: -webkit-linear-gradient(right, #ffeafb, #ffeafb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px #ffeafb, 0 0 2px #ffeafb, 0 0 2px #ffeafb, 0 0 2px #ffeafb;
+`;
+
 export const Content = styled("p")`
   padding: 0.75rem 0 0.75rem;
 `;

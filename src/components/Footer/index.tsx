@@ -19,6 +19,7 @@ import {
   Label,
   LanguageSwitch,
   LanguageSwitchContainer,
+  SocialLink,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -31,23 +32,9 @@ const Footer = ({ t }: any) => {
     i18n.changeLanguage(language);
   };
 
-  const SocialLink = ({ href, src }: SocialLinkProps) => {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        key={src}
-        aria-label={src}
-      >
-        <SvgIcon src={src} width="25px" height="25px" />
-      </a>
-    );
-  };
-
   return (
     <>
-      <FooterSection>
+      {/* <FooterSection>
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
@@ -125,51 +112,32 @@ const Footer = ({ t }: any) => {
             </Col>
           </Row>
         </Container>
-      </FooterSection>
-      <Extra>
+      </FooterSection> */}
+      <FooterSection>
         <Container border={true}>
           <Row
             justify="space-between"
             align="middle"
-            style={{ paddingTop: "3rem" }}
+            style={{ paddingTop: "2rem", display: "flex", flexDirection: "row" }}
           >
             <NavLink to="/">
               <LogoContainer>
-                <SvgIcon
-                  src="logo.svg"
-                  aria-label="homepage"
-                  width="101px"
-                  height="64px"
-                />
+                <SvgIcon src="logo.svg" aria-label="homepage" width="191px" height="74px" />
               </LogoContainer>
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
-              />
-              <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
-              />
-              <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
-              />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
-                src="medium.svg"
-              />
-              <a href="https://www.buymeacoffee.com/adrinlol">
-                <img
-                  src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=adrinlol&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
-                  alt="Buy me a pizza"
-                />
-              </a>
+                href=""
+              >
+                <SvgIcon src="twitterx.svg" width="25px" height="25px" />
+              </SocialLink>
+              <SocialLink href="">
+                <SvgIcon src="discord.svg" width="25px" height="25px" />
+              </SocialLink>
             </FooterContainer>
           </Row>
         </Container>
-      </Extra>
+      </FooterSection>
     </>
   );
 };
