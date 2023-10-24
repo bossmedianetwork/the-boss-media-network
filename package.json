@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bossmedianetwork.github.io/the-boss-media-network",
   "dependencies": {
     "@types/node": "^15.14.9",
     "@types/react": "^17.0.69",
@@ -10,7 +11,6 @@
     "@types/styled-components": "^5.1.29",
     "antd": "^4.24.14",
     "axios": "^0.21.4",
-    "gh-pages": "^6.0.0",
     "i18next": "^19.9.2",
     "i18next-browser-languagedetector": "^6.1.8",
     "i18next-xhr-backend": "^3.2.2",
@@ -45,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
